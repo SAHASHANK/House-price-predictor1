@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House Price Predictor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Doodles -->
+  <div class="doodle doodle1"></div>
+  <div class="doodle doodle2"></div>
+  <div class="doodle doodle3"></div>
+
+  <!-- Main Container -->
+  <div class="container fade-in">
+    <div class="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/235/235889.png" alt="house icon" class="icon">
+      <h1>House Price Predictor</h1>
+      <p>Enter the property details below to get an estimated market price instantly.</p>
+    </div>
+
+    <form id="predictForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Total Area (sq ft)</label>
+          <input type="number" id="area" name="Area" required>
+        </div>
+        <div class="form-group">
+          <label>Bedrooms</label>
+          <input type="number" id="bedrooms" name="Bedrooms" required>
+        </div>
+        <div class="form-group">
+          <label>Bathrooms</label>
+          <input type="number" id="bathrooms" name="Bathrooms" required>
+        </div>
+        <div class="form-group">
+          <label>Floors</label>
+          <input type="number" id="floors" name="Floors" required>
+        </div>
+        <div class="form-group">
+          <label>Year Built</label>
+          <input type="number" id="yearbuilt" name="YearBuilt" required>
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <select id="location" name="Location" required>
+            <option value="">Select Location</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Suburban">Suburban</option>
+            <option value="Rural">Rural</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Condition</label>
+          <select id="condition" name="Condition" required>
+            <option value="">Select Condition</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Garage</label>
+          <select id="garage" name="Garage" required>
+            <option value="">Select Garage</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" id="predictBtn">Predict Price</button>
+    </form>
+
+    <div id="loader" class="loader"></div>
+    <div id="result" class="result"></div>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
